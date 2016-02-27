@@ -32,6 +32,29 @@ describe('格子点', function () {
             assert.ok(sut.hasSameCoordinatesWith(new GridPoint(2, 2)) === false);
         });
 
-    });
+        it('格子点(1,3)は隣り合っているべき', function () {
+            assert.ok(sut.isNeighborOf(new GridPoint(1, 3)) === true);
+        });
 
+        it('格子点(2,2)は隣り合っているべき', function () {
+            assert.ok(sut.isNeighborOf(new GridPoint(2, 2)) === true);
+        });
+
+        it('格子点(1,1)は隣り合っているべき', function () {
+            assert.ok(sut.isNeighborOf(new GridPoint(1, 1)) === true);
+        });
+
+        it('格子点(0,2)は隣り合っているべき', function () {
+            assert.ok(sut.isNeighborOf(new GridPoint(0, 2)) === true);
+        });
+
+        it('格子点(2,3)は隣り合っていないべき', function () {
+            assert.ok(sut.isNeighborOf(new GridPoint(2, 3)) === false);
+        });
+
+        it('格子点(2,1)は隣り合っていないべき', function () {
+            assert.ok(sut.isNeighborOf(new GridPoint(2, 1)) === false);
+        });
+
+    });
 });
