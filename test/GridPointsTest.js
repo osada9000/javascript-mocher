@@ -25,5 +25,20 @@ describe('格子点集合', function () {
             assert.ok(sut.has(new GridPoint(2,3)) === false);
         });
 
+        it('格子点が隣接してない', function () {
+            assert.ok(sut.connected() === false);
+        });
+
+    });
+
+    describe('格子点集合(2,2),(2,3)を与えたとき', function () {
+        beforeEach(function () {
+            sut = new GridPoints(new GridPoint(2, 2), new GridPoint(2, 3));
+        });
+
+        it('格子点が隣接している', function () {
+            assert.ok(sut.connected() === true);
+        });
+
     });
 });
