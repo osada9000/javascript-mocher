@@ -2,7 +2,7 @@
 
 var assert = require('power-assert');
 
-var GridPoint = require('../lib/gridpoint');
+var GridPoint = require('../lib/GridPoint');
 
 describe('格子点', function () {
     var sut;
@@ -55,6 +55,6 @@ describe('格子点', function () {
         it('格子点(2,1)は隣り合っていないべき', function () {
             assert.ok(sut.isNeighborOf(new GridPoint(2, 1)) === false);
         });
-
     });
+
 });

@@ -12,6 +12,7 @@
   "boss": true,
   "eqnull": true,
   "node": true,
+  "laxbreak": true,
   "globals": {
     "describe": false,
     "it": false,
